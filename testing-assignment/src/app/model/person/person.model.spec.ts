@@ -1,9 +1,8 @@
 import {async, TestBed} from "@angular/core/testing";
 import {Person} from "./person.model";
 
-
 describe('Person', () => {
-  let Claudia: Person
+  let newPerson: Person
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [Person],
@@ -13,15 +12,15 @@ describe('Person', () => {
 
 
   beforeEach( () => {
-    Claudia = new Person('Claudia')
+    newPerson = new Person('Claudia')
   })
 
   it('should call Person Claudia', function () {
-    expect(Claudia.sayHello()).toContain('Claudia')
+    expect(newPerson.sayHello()).toContain('Claudia')
   });
 
   afterEach(() => {
-    Claudia = null;
+    newPerson = null;
   })
 
 })
