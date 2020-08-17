@@ -3,6 +3,7 @@ import {Person} from "./person.model";
 
 describe('Person', () => {
   let newPerson: Person
+
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [Person],

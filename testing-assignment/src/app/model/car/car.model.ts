@@ -15,7 +15,7 @@ export class Car {
   }
 
   getAge(year): number {
-    const today = new Date()
+    let today = new Date()
     return (today.getFullYear() - year);
   }
 }
