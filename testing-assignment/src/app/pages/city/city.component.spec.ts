@@ -1,6 +1,5 @@
 import {TestBed,async} from "@angular/core/testing";
 import {CityComponent} from "./city.component";
-import {By} from "@angular/platform-browser";
 
 describe('CityComponent', () => {
   beforeEach(async( () => {
@@ -34,7 +33,6 @@ it('should change city variable to "Utrecht"', () => {
 
 it ('should render city name on page', () => {
   let fixture = TestBed.createComponent(CityComponent);
-  let component = fixture.componentInstance;
   fixture.detectChanges();
   expect(fixture.nativeElement.querySelector('h1').textContent).toContain('Haarlem');
 })
