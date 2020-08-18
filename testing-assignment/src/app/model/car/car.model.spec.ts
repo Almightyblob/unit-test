@@ -23,7 +23,7 @@ describe( 'Car', ()=> {
     expect(newCar.description()).toEqual('This is a Honda Civic from 2018 and it has 4 wheels')
   });
 
-  it('should return the age of the car in years', function () {
+  it('should return the age of the car in years (2)', function () {
     let year = 2018
     let age = 2
     expect(newCar.getAge(year)).toEqual(age)

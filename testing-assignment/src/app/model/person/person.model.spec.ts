@@ -11,7 +11,6 @@ describe('Person', () => {
     }).compileComponents()
   }))
 
-
   beforeEach( () => {
     newPerson = new Person('Claudia')
   })
