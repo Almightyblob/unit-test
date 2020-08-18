@@ -1,15 +1,7 @@
-import {async, TestBed} from '@angular/core/testing';
 import {Car} from './car.model';
 
 describe( 'Car', () => {
   let newCar: Car;
-
-  beforeEach(async( () => {
-    TestBed.configureTestingModule({
-      imports: [Car],
-      declarations: []
-    }).compileComponents();
-  }));
 
   beforeEach(() => {
     newCar = new Car('Honda', 'Civic', 2018, 4);
