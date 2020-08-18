@@ -1,35 +1,35 @@
-import {async, TestBed} from "@angular/core/testing";
-import {Car} from "./car.model";
+import {async, TestBed} from '@angular/core/testing';
+import {Car} from './car.model';
 
-describe( 'Car', ()=> {
+describe( 'Car', () => {
   let newCar: Car;
 
   beforeEach(async( () => {
     TestBed.configureTestingModule({
       imports: [Car],
       declarations: []
-    }).compileComponents()
-  }))
+    }).compileComponents();
+  }));
 
   beforeEach(() => {
-    newCar = new Car('Honda', 'Civic', 2018, 4)
-  })
+    newCar = new Car('Honda', 'Civic', 2018, 4);
+  });
 
   afterEach(() => {
-    newCar = null
-  })
-
-  it('should return the car description (Honda Civic, 2018, 4 wheels)', function () {
-    expect(newCar.description()).toEqual('This is a Honda Civic from 2018 and it has 4 wheels')
+    newCar = null;
   });
 
-  it('should return the age of the car in years (2)', function () {
-    let year = 2018
-    let age = 2
-    expect(newCar.getAge(year)).toEqual(age)
+  it('should return the car description (Honda Civic, 2018, 4 wheels)', () => {
+    expect(newCar.description()).toEqual('This is a Honda Civic from 2018 and it has 4 wheels');
   });
 
-  // getWheels does not need to be tested since the result is already included in description()
+  it('should return the age of the car in years (2)', () => {
+    const year = 2018;
+    const age = 2;
+    expect(newCar.getAge(year)).toEqual(age);
+  });
+
+  // getWheels does not need to be tested individually since the result of numWheels is already included in description()
 
 
-} )
+} );
