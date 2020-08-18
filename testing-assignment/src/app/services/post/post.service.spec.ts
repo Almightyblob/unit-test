@@ -9,13 +9,13 @@ describe('PostService', () => {
     userId: 12,
     id: 1,
     title: 'title1',
-    body: 'post content',
+    body: 'post content one',
   },
     {
     userId: 24,
     id: 2,
     title: 'title2',
-    body: 'post content',
+    body: 'post content two',
   }
   ];
 
@@ -35,9 +35,11 @@ describe('PostService', () => {
   it('should call API and return array of Posts', () => {
     postService.getPosts().subscribe( posts => {
       expect(posts).toBeTruthy();
+      expect(posts[0].title).toBe('title1');
+      expect(posts[0].body).toBe('post content one');
     });
     const req = httpTestingController.expectOne('https://jsonplaceholder.typicode.com/posts');
     expect(req.request.method).toBe('GET');
-    req.flush({payload: 'mockData'});
+    req.flush({mockData});
   });
 });
