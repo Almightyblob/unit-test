@@ -35,11 +35,11 @@ describe('PostService', () => {
   it('should call API and return array of Posts', () => {
     postService.getPosts().subscribe( posts => {
       expect(posts).toBeTruthy();
-      expect(posts[0].title).toBe('title1');
-      expect(posts[1].body).toBe('post content two');
+      expect(posts[0].body).toBe('post content one');
+      expect(posts[1].title).toBe('title2');
     });
     const req = httpTestingController.expectOne('https://jsonplaceholder.typicode.com/posts');
     expect(req.request.method).toBe('GET');
-    req.flush({mockData});
+    req.flush(mockData);
   });
 });

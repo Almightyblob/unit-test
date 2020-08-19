@@ -16,7 +16,7 @@ describe( 'Car', () => {
   });
 
   it('should return the age of the car in years (2)', () => {
-    const year = 2018;
+    const year = (new Date().getFullYear() - 2);
     const age = 2;
     expect(newCar.getAge(year)).toEqual(age);
   });
